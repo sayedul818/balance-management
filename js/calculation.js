@@ -37,6 +37,9 @@ document.getElementById("save-btn").addEventListener("click",function(){
    }else if(saveInputFieldValue<=0){
     alert("please provide a valid number");
     return;
+   }else if(isNaN(saveInputFieldValue)){
+    alert("please provide a valid number");
+    return;
    }
    const savingAmountField=document.getElementById("saving-amount-field");
    savingAmountField.innerText=savingAmount;
