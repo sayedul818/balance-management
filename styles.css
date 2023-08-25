@@ -1,0 +1,16 @@
+ .h1-with-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .h1-with-image img {
+    margin-right: 10px; /* Add spacing between image and text */
+  }
+  .h1-with-input {
+    display: flex;
+    justify-content: center;
+    
+
+  }
