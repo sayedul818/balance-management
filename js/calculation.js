@@ -3,7 +3,9 @@ document.getElementById("calculate-btn").addEventListener("click",function(){
    const foodInputFieldValue=getInputFieldValueID("food-input-field");
    const rentInputFieldValue=getInputFieldValueID("rent-input-field");
    const clothesInputFieldValue=getInputFieldValueID("clothes-input-field");
-   const totalInputFieldValue=(foodInputFieldValue+rentInputFieldValue+clothesInputFieldValue);
+   const transportInputField=getInputFieldValueID("Transport-input-field");
+   const othersInputField=getInputFieldValueID("others-input-field");
+   const totalInputFieldValue=(foodInputFieldValue+rentInputFieldValue+clothesInputFieldValue+transportInputField+othersInputField);
    const incomeInputField=document.getElementById("income-input-field");
    const incomeInputFieldValue=parseFloat(incomeInputField.value);
    if(isNaN (totalInputFieldValue)){
