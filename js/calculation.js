@@ -4,20 +4,20 @@ document.getElementById("calculate-btn").addEventListener("click",function(){
    const rentInputFieldValue=getInputFieldValueID("rent-input-field");
    const clothesInputFieldValue=getInputFieldValueID("clothes-input-field");
    const totalInputFieldValue=(foodInputFieldValue+rentInputFieldValue+clothesInputFieldValue);
+   const incomeInputField=document.getElementById("income-input-field");
+   const incomeInputFieldValue=parseFloat(incomeInputField.value);
    if(isNaN (totalInputFieldValue)){
     alert("please provide valid number inpute data");
     return;
    }
-   const incomeInputField=document.getElementById("income-input-field");
-   const incomeInputFieldValue=parseFloat(incomeInputField.value);
-   const totalBalanceValue=incomeInputFieldValue-totalInputFieldValue;
-   if(isNaN(incomeInputField.value)){
-    alert("please provide valid number inpute data");
-    return;
+    else if(isNaN(incomeInputFieldValue)){
+      alert("please provide valid number inpute data");
+      return;
    }else if( incomeInputFieldValue<totalInputFieldValue){
-    alert("tor eto income nai beta");
-    return;
+      alert("tor eto income nai beta");
+      return;
    }
+   const totalBalanceValue=incomeInputFieldValue-totalInputFieldValue;
    const totalExpense=document.getElementById("total-expense");
    totalExpense.innerText=totalInputFieldValue;
    const balanceValueId=document.getElementById("balnce-display");
